@@ -1,61 +1,94 @@
-BASH-SCRIPTING
+Bash Scripting – Automated Backup System
 
-This repository contains a simple bash scripting project that helps automate backups for your files and folders.
-Below is a summary explaining each part of the project.
+This repository contains a **simple yet powerful Bash scripting project** that automates backups for your files and folders.  
+It’s designed to help you practice real-world shell scripting concepts like file management, logging, configuration handling, and automation.
 
 Folder Structure
-text
 bashscripting_test/
-  backups/
-    backup.log
-  data_folder/
-  backup.config
-  backup.log
-  backup.sh
-README.md
+│
+├── backups/ # Stores generated backup files (.tar.gz)
+│ └── backup.log # Log file recording all backup activities
+│
+├── data_folder/ # Folder containing the files/folders to back up
+│
+├── backup.config # Configuration file for the backup script
+├── backup.log # Root-level log for summary and errors
+├── backup.sh # Main Bash script that handles backup & restore
+└── README.md # Project documentation
 
-Explanation of Files and Folders
-backups/
-Stores backup logs. The backup.log here saves records of backup operations performed by the script.
-
-data_folder/
-Contains the data/files that need to be backed up. Place any files or subfolders here that you want the backup script to process.
-
-
-backup.config
-A configuration file that holds settings for the backup script, such as source and destination paths, exclusions, or log locations.
-
-backup.log
-A log file at the root level that records a summary of backup operations, errors, and details for easy troubleshooting.
-
-backup.sh
-The main bash script that performs the backup operations. It reads configuration from backup.config, scans files in data_folder
-copies them to the backup destination, and updates the logs.
+## 'backups/'
+This directory stores all the backup archives (e.g., `backup-2025-11-03-1612.tar.gz`) and the backup logs.  
+It’s automatically created if it doesn’t exist.
 
 
-How to Use
-Edit backup.config:
-Set your backup preferences such as which folders to back up, where to save backups, and log file locations.
+## 'data_folder/'
+Contains the data/files you want to back up.  
+You can place any files or folders here — the script will automatically include them in the backup process.
 
-Put Files in data_folder/:
-Add any content you want to include in the backup.
 
-Run the Script:
-Use the terminal.
+## 'Contains the data/files you want to back up.  
+Holds the configuration details for your script, such as:
+- Source and destination paths  
+- Log file location  
+- Backup naming format  
 
-text
+
+## 'backup.log'
+Records a summary of all backup and restore operations, including:
+- Timestamp  
+- Action performed (backup/restore)  
+- File names  
+- Success or failure messages  
+
+##  'backup.sh'
+The main executable Bash script that performs:
+- Backup creation (compresses source data into `.tar.gz`)  
+- Restore operations from an existing backup file  
+- Log management and error handling  
+
+
+How to use
+
+Open the `backup.config` file and update your preferences:
+```bash
+SOURCE="./data_folder"
+DESTINATION="./backups"
+LOG_FILE="./backup.log"
+
+1.Add Files for Backup
+
+Place any files or folders you want to back up inside the data_folder/ directory.
+
+2.Run the Script
+Use your terminal to execute the script:
+
 bash backup.sh
-This will automatically copy files and generate/update log entries of everything done.
 
-Check Logs:
-Review backups/backup.log or the root level backup.log to monitor backup status or debug issues.
+3.Restore a Backup
 
-Run the command:
-bash
-./backup.sh data_folder
+To restore a specific backup archive:
 
-![WhatsApp Image 2025-11-03 at 16 28 30_b4e40b18](https://github.com/user-attachments/assets/a92c3b93-970f-4e24-bfbf-0d469527945a)
+./backup.sh --restore backups/backup-YYYY-MM-DD-HHMM.tar.gz --to ./restored_data
 
-Purose of bashscripting
-This project demonstrates a simple way to automate file backups and logging using bash scripts.
-It can be extended for more complex backup needs, scheduled jobs, or custom rules.
+This will extract the selected backup into the specified folder.
+
+4.Check Logs
+
+You can review the logs at:
+
+backups/backup.log – detailed log
+
+backup.log – summary log in the main directory
+
+5.Here’s how you might run a typical backup:
+
+./backup.sh ./data_folder
+
+![WhatsApp Image 2025-11-03 at 16 28 30_b4e40b18](https://github.com/user-attachments/assets/d587137f-3185-4c9e-b647-a9af18436b98)
+
+
+
+
+
+
+
