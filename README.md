@@ -89,6 +89,26 @@ backup.log – summary log in the main directory
 
 
 
+This project demonstrates how Bash scripting can automate file backup and recovery tasks.
+It helps in learning:
+
+Shell scripting basics
+
+File and directory operations
+
+Logging and error handling
+
+Configuration-driven automation
+
+You can easily extend this project for:
+
+Scheduled backups using cron
+
+Remote backups via rsync
+
+
+Versioned or incremental backups
+
 
 
 
