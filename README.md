@@ -84,7 +84,8 @@ backup.log – summary log in the main directory
 
 ./backup.sh ./data_folder
 
-![Uploading image.png…]()
+<img width="1674" height="387" alt="image" src="https://github.com/user-attachments/assets/7b4fa848-633a-4c2a-b84c-1548fb6c87a1" />
+
 
 
 
