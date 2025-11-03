@@ -84,7 +84,8 @@ backup.log – summary log in the main directory
 
 ./backup.sh ./data_folder
 
-![WhatsApp Image 2025-11-03 at 16 28 30_b4e40b18](https://github.com/user-attachments/assets/d587137f-3185-4c9e-b647-a9af18436b98)
+![Uploading image.png…]()
+
 
 
 
