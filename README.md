@@ -1,3 +1,5 @@
+![WhatsApp Image 2025-11-03 at 16 28 30_b4e40b18](https://github.com/user-attachments/assets/71d39061-e232-494b-8c03-50fcfbafe7f9)
+
 Bash Scripting – Automated Backup System
 
 This repository contains a **simple yet powerful Bash scripting project** that automates backups for your files and folders.  
@@ -108,5 +110,4 @@ Remote backups via rsync
 
 Versioned or incremental backups
 
-![WhatsApp Image 2025-11-03 at 16 28 30_b4e40b18](https://github.com/user-attachments/assets/71d39061-e232-494b-8c03-50fcfbafe7f9)
 
