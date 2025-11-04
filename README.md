@@ -60,6 +60,8 @@ LOG_FILE="./backup.log"
 1.Add Files for Backup
 
 Place any files or folders you want to back up inside the data_folder/ directory.
+cd bash-scripting_test
+git clone https://github.com/katepalliyaswanth-02/bashscripting-task1.git
 
 2.Run the Script
 Use your terminal to execute the script:
