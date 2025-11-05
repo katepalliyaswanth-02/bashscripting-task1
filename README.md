@@ -6,6 +6,7 @@ This repository contains a **simple yet powerful Bash scripting project** that a
 It’s designed to help you practice real-world shell scripting concepts like file management, logging, configuration handling, and automation.
 
 Folder Structure
+```
 bashscripting_test/
 │
 ├── backups/ # Stores generated backup files (.tar.gz)
@@ -17,7 +18,7 @@ bashscripting_test/
 ├── backup.log # Root-level log for summary and errors
 ├── backup.sh # Main Bash script that handles backup & restore
 └── README.md # Project documentation
-
+```
 ## 'backups/'
 This directory stores all the backup archives (e.g., `backup-2025-11-03-1612.tar.gz`) and the backup logs.  
 It’s automatically created if it doesn’t exist.
